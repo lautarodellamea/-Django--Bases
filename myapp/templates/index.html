@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+
+{# Este Layout lo podriamos mostrar solo si el usuario tiene algun rol especifico #}
+{# {% extends 'layouts/base2.html' %} #}
+
+{% load static %}
+
+{% block content %}
+<h1>Welcome to {{title}}</h1>
+
+<!-- debo reiniciar el servidor  -->
+<img src="{% static 'harry-ron.jpeg' %}" alt="">
+
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae autem soluta deleniti, id vero aut praesentium.
+  Aspernatur similique, alias, quidem id quibusdam voluptates corrupti unde at ab debitis inventore. Explicabo!</p>
+
+
+<style>
+  img {
+    width: 300px;
+  }
+</style>
+{% endblock %}

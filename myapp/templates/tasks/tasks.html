@@ -1,0 +1,61 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<h1>Tasks</h1>
+
+{# comentario, no aparece en el HTML final #}
+<!-- Este si se ve -->
+
+
+{% for task in tasks %}
+
+<div class="task">
+
+
+  <h3>{% if task.done == False %} 🕝 {% else %} ✅ {% endif %} {{task.title}}</h3>
+
+
+
+  {% if task.done == False %}
+  <p class="pending-task">Tarea pendiente</p>
+
+  {% else %}
+  <p class="completed-task">Tarea completada</p>
+
+  {% endif %}
+
+  <p>{{task.description}}</p>
+  <p class="project">Project: {{task.project.id}} - {{task.project.name}}</p>
+  <button>Delete</button>
+  <button>✅</button>
+
+</div>
+
+{% endfor %}
+
+<style>
+  * {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .task {
+    background-color: rgb(16, 149, 183);
+    color: #fff;
+    padding: .5rem;
+    margin: 1rem;
+  }
+
+  .project {
+    font-style: italic;
+    opacity: .8;
+  }
+
+  .pending-task {
+    color: rgb(156, 29, 29);
+  }
+
+  .completed-task {
+    color: green;
+  }
+</style>
+{% endblock %}

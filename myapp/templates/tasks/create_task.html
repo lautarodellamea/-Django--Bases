@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+
+
+{% block content %}
+<h1>Create a new task</h1>
+
+<!-- <input type="text"> -->
+<!-- <textarea name="description" id=""></textarea> -->
+
+{# django nos permite crear formularios , creo el archivo forms.py #}
+
+{# con el as_p metemos cada elemento del form dentro de una etiqueta p, lo cual me permite ubicar cada input uno
+debajo de otro #}
+<form method="POST">
+  {# es algo propio de django para verificar que el formulario a sido generado por nuestro propio servidor, id que le
+  añade los formularios para que no nos copien el sitio e intenten mandarnos datos desde otro lugar #}
+  {% csrf_token %}
+  {{ form.as_p }}
+
+  <button>Save</button>
+</form>
+
+{% endblock %}

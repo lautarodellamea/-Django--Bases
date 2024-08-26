@@ -1,0 +1,42 @@
+body {
+  background-color: #202020;
+  color: whitesmoke;
+}
+
+.navbar{
+  background-color: #404040;
+  padding: 5px 10px;
+  
+}
+.navbar ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 2rem;
+  
+}
+
+.navbar ul li a{
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.navbar ul li a:hover{
+ background-color: #811111;
+ color: #e3ac21;
+}
+
+.container {
+  max-width: 1200px;
+  background-color: rgb(154, 0, 0);
+  margin: auto;
+}
+
+.mi-input{
+  background: wheat;
+  padding: 10px;
+  text-align: center;
+  display: block;
+}
